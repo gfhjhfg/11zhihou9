@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2.将字符串中的字母使用**重新拼接：
+    // 如： var str = "a b c"; 变成 -- a**b**c -->
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var str = prompt("请输入一串带有空格的字符串");
+        var newstr='';
+        for(var i=0;i<str.length;i++){
+            if(str[i]==' '){
+                newstr+='**';
+            }
+            newstr+=str[i];
+        }
+        alert(str+"变成了"+newstr);
+    </script>
+</body>
+</html>

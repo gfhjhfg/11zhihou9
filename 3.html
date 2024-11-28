@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3.将字符串中—后面的小写字母变成大写，
+     并且删除-符号    “abc—r67p8”----“abcR67P8” -->
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var str = prompt("请输入一串带有'——'及字母的字符串");
+        var newstr='';
+        var is=true;
+        for(var i=0;i<str.length;i++){
+            if(is==true) {
+                if(str[i]!='-'){
+                    newstr+=str[i];
+                }else {
+                    newstr+='';
+                    is=false;
+                }
+            }else{
+                if(str[i]=='-'){
+                    newstr+='';
+                    is=false;
+                }else{
+                    var a=str[i];
+                    b=a.toUpperCase();
+                    if(b!=a){
+                        newstr+=b;
+                        is=true;
+                    }else{
+                        newstr+=a;
+                        is=true;
+                    }
+                }
+            }
+        }
+        alert(str+"中的’-‘去除后其后面紧跟着的小写字母变成大写 为"+newstr);
+    </script>
+</body>
+</html>

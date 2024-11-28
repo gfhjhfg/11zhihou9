@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <!-- 1.将字符串中的大写字母变成小写，小写字母
+    变成大写字母，如：// AbCd  -- aBcD  -->
+    <script>
+        var str = prompt("请输入一串带有大小写的字符串");
+        var b='',c='',d='';
+        for(var i=0;i<str.length;i++){
+            var a=str[i];
+            b=a.toUpperCase();
+            c+=a.toLowerCase();
+            // console.log(a);
+            // console.log(b);
+            // console.log(c);
+            if(b!=a){
+                // a=a.toUpperCase;
+                d+=b;
+                // console.log('小写到大写'+d);
+                // d+=b;
+            }
+            if(c!=a){
+                // console.log('大写到小写'+c);
+                d+=c;
+            }
+        }
+        // alert(str+'大小写互换为'+c);
+        // console.log(str+'大小写互换为'+b);
+        alert('小写到大写'+d);
+        // alert('大写到小写'+d);
+    </script>
+</body>
+</html>

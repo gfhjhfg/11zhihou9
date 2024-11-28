@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 9.手机号隐私处理 "17798765690" ---- "177****5690" -->
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var str = prompt("请输入一串电话号码");
+        var a='';
+        for (var i = 0; i < 11; i++) {
+            if(i>=3&&i<=6){
+                a+='*';
+            }else {
+                a+=str[i];
+            }
+        }
+        alert(str+"将中间号码*处理后为"+a);
+    </script>
+</body>
+</html>

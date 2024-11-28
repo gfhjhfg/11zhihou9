@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 8.去字符串首尾空格，不使用trim的方法
+    "    a    b    c     " ----"a    b    c" -->
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var str = prompt("请输入一串首尾带空格的字符串");
+        var k='';
+        for( var i = 0; i <str.length; i++){
+            if(str[i]!='-'){
+                for(var q =i;q<str.length;q++){
+                    k+=str[q];
+                }
+                // k=str.slice(i,str.length);
+                break;
+            }
+        }
+        console.log(k);
+        for( var j = k.length-1; j>=0; j--){
+            // console.log(k);
+            if(k[j]!='-'){
+                k=k.slice(0,j+1);
+                // console.log(k);
+                break;
+            }
+        }
+        // console.log(k);
+        alert(str+"前后的-去除后为"+k);
+    </script>
+</body>
+</html>

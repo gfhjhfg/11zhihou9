@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.将字符串中的大写字母变成小写，小写字母
+    变成大写字母，如：// AbCd  -- aBcD  -->
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var str = prompt("请输入一串带有大小写的字符串");
+        var result = '';
+        for (var i = 0; i < str.length; i++) {
+            var char = str[i];
+            var upperChar = char.toUpperCase();
+            var lowerChar = char.toLowerCase();
+            if (char === lowerChar) {
+                result += upperChar;
+            } else {
+                result += lowerChar;
+            }
+        }
+        alert(str+'大小写转换后的字符串为'+result);
+    </script>
+</body>
+</html>
